@@ -1,0 +1,6 @@
+category: Audio Video
+requires: cygwin glib2 gtk2-x11 libSDL12 libjpeg62 libmjpegtools18
+sdesc: "MPEG2 compression suite (apps)"
+ldesc: "The mjpeg programs are a set of tools that can do recording of 
+videos and playback, simple cut-and-paste editing and the MPEG 
+compression of audio and video under Linux."

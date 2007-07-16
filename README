@@ -1,16 +1,18 @@
 mjpegtools
 ------------------------------------------
-
+The mjpeg programs are a set of tools that can do recording of videos 
+and playback, simple cut-and-paste editing and the MPEG compression of 
+audio and video under Linux.
 
 Runtime requirements:
   cygwin-1.5.24-2
-  glib2-2.12.9-1
-  gtk2-x11-2.10.9-1
+  glib2-2.12.12-2
+  gtk2-x11-2.10.13-1
   libSDL12-1.2.11-1
   libdv4-1.0.0-1
   libjpeg62-6b-12
   libpng12-1.2.12-1
-  libquicktime-0.9.10-1
+  libquicktime-1.0.0-1
 
 Build requirements:
 (besides corresponding -devel packages)
@@ -146,7 +148,7 @@ Files included in the binary packages:
   /usr/share/man/man1/yuvycsnoise.1.gz
   /usr/share/man/man5/yuv4mpeg.5.gz
 
-(libmjpeg18)
+(libmjpegtools18)
   /usr/bin/cyglavfile-1-8-0.dll
   /usr/bin/cyglavjpeg-1-8-0.dll
   /usr/bin/cyglavplay-1-8-0.dll
@@ -154,7 +156,7 @@ Files included in the binary packages:
   /usr/bin/cygmpeg2encpp-1-8-0.dll
   /usr/bin/cygmplex2-1-8-0.dll
 
-(libmjpeg-devel)
+(libmjpegtools-devel)
   /usr/include/mjpegtools/audiolib.h
   /usr/include/mjpegtools/avilib.h
   /usr/include/mjpegtools/editlist.h
@@ -174,6 +176,7 @@ Files included in the binary packages:
   /usr/include/mjpegtools/mpeg2enc/mpeg2encoder.hh
   /usr/include/mjpegtools/mpeg2enc/mpeg2encoptions.hh
   /usr/include/mjpegtools/mpeg2enc/mpeg2encparams.h
+  /usr/include/mjpegtools/mpeg2enc/mpeg2syntaxcodes.h
   /usr/include/mjpegtools/mpeg2enc/picture.hh
   /usr/include/mjpegtools/mpeg2enc/picturereader.hh
   /usr/include/mjpegtools/mpeg2enc/predict_ref.h
