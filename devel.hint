@@ -1,5 +1,5 @@
 category: Audio Video
-requires: cygwin libSDL-devel libdv-devel libjpeg-devel libquicktime-devel
+requires: cygwin libmjpegtools19 libSDL-devel libdv-devel libjpeg-devel libquicktime-devel
 external-source: mjpegtools
 sdesc: "MPEG2 compression suite (development)"
 ldesc: "The mjpeg programs are a set of tools that can do recording of 

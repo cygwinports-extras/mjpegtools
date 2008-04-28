@@ -5,28 +5,28 @@ and playback, simple cut-and-paste editing and the MPEG compression of
 audio and video under Linux.
 
 Runtime requirements:
-  cygwin-1.5.24-2
-  glib2-2.12.12-2
-  gtk2-x11-2.10.13-1
-  libSDL12-1.2.11-1
+  cygwin-1.5.25-11
+  glib2-2.14.6-1
+  gtk2-x11-2.12.9-1
+  libSDL12-1.2.12-1
+  libSDL_gfx-2.0.16-1
   libdv4-1.0.0-1
   libjpeg62-6b-12
-  libpng12-1.2.12-1
-  libquicktime-1.0.0-1
+  libpng12-1.2.26-1
+  libquicktime0-1.0.2-1
 
 Build requirements:
 (besides corresponding -devel packages)
-  cygwin-1.5.23-2
-  autoconf2.5-2.60-2
+  autoconf2.5-2.61-1
   automake1.9-1.9.6-2
   binutils-20060817-1
-  bison-2.3-1
-  cygport-0.2.7-1
-  flex-2.5.33-1
-  gawk-3.1.5-4
+  cygport-0.3.9-1
+  gawk-3.1.6-1
   gcc-core-3.4.4-3
-  libtool1.5-1.5.23a-2
+  gcc-g++-3.4.4-3
+  libtool-2.2.2-2
   make-3.81-1
+  pkg-config-0.21-1
   sed-4.1.5-2
 
 Canonical website:
@@ -38,15 +38,15 @@ Canonical download:
 -------------------------------------------
 
 Build instructions:
-  unpack mjpegtools-1.8.0-X-src.tar.bz2
+  unpack mjpegtools-1.9.0rc3-X-src.tar.bz2
     if you use setup to install this src package, it will be
 	 unpacked under /usr/src automatically
   cd /usr/src
-  cygport ./mjpegtools-1.8.0-X.cygport all
+  cygport ./mjpegtools-1.9.0rc3-X.cygport all
 
 This will create:
-  /usr/src/mjpegtools-1.8.0-X-src.tar.bz2
-  /usr/src/mjpegtools-1.8.0-X.tar.bz2
+  /usr/src/mjpegtools-1.9.0rc3-X-src.tar.bz2
+  /usr/src/mjpegtools-1.9.0rc3-X.tar.bz2
 
 -------------------------------------------
 
@@ -65,6 +65,7 @@ Files included in the binary packages:
   /usr/bin/lavinfo.exe
   /usr/bin/lavpipe.exe
   /usr/bin/lavplay.exe
+  /usr/bin/lavtc.sh
   /usr/bin/lavtrans.exe
   /usr/bin/matteblend.flt.exe
   /usr/bin/mjpeg_simd_helper.exe
@@ -77,17 +78,20 @@ Files included in the binary packages:
   /usr/bin/png2yuv.exe
   /usr/bin/pnmtoy4m.exe
   /usr/bin/ppmtoy4m.exe
+  /usr/bin/qttoy4m.exe
   /usr/bin/transist.flt.exe
   /usr/bin/y4mblack.exe
   /usr/bin/y4mcolorbars.exe
   /usr/bin/y4mdenoise.exe
   /usr/bin/y4mhist.exe
   /usr/bin/y4minterlace.exe
+  /usr/bin/y4mivtc.exe
   /usr/bin/y4mshift.exe
   /usr/bin/y4mspatialfilter.exe
   /usr/bin/y4mstabilizer.exe
   /usr/bin/y4mtopnm.exe
   /usr/bin/y4mtoppm.exe
+  /usr/bin/y4mtoqt.exe
   /usr/bin/y4mtoyuv.exe
   /usr/bin/y4munsharp.exe
   /usr/bin/ypipe.exe
@@ -105,16 +109,24 @@ Files included in the binary packages:
   /usr/bin/yuvscaler.exe
   /usr/bin/yuvycsnoise.exe
   /usr/bin/yuyvtoy4m.exe
-  /usr/share/doc/Cygwin/mjpegtools-1.8.0.README
-  /usr/share/doc/mjpegtools-1.8.0/AUTHORS
-  /usr/share/doc/mjpegtools-1.8.0/BUGS
-  /usr/share/doc/mjpegtools-1.8.0/COPYING
-  /usr/share/doc/mjpegtools-1.8.0/ChangeLog
-  /usr/share/doc/mjpegtools-1.8.0/Changes
-  /usr/share/doc/mjpegtools-1.8.0/INSTALL
-  /usr/share/doc/mjpegtools-1.8.0/NEWS
-  /usr/share/doc/mjpegtools-1.8.0/README
-  /usr/share/doc/mjpegtools-1.8.0/TODO
+  /usr/share/doc/mjpegtools-1.9.0rc3/AUTHORS
+  /usr/share/doc/mjpegtools-1.9.0rc3/BUGS
+  /usr/share/doc/mjpegtools-1.9.0rc3/COPYING
+  /usr/share/doc/mjpegtools-1.9.0rc3/ChangeLog
+  /usr/share/doc/mjpegtools-1.9.0rc3/Changes
+  /usr/share/doc/mjpegtools-1.9.0rc3/HINTS
+  /usr/share/doc/mjpegtools-1.9.0rc3/INSTALL
+  /usr/share/doc/mjpegtools-1.9.0rc3/INSTALL.real
+  /usr/share/doc/mjpegtools-1.9.0rc3/NEWS
+  /usr/share/doc/mjpegtools-1.9.0rc3/PLANS
+  /usr/share/doc/mjpegtools-1.9.0rc3/README
+  /usr/share/doc/mjpegtools-1.9.0rc3/README.AltiVec
+  /usr/share/doc/mjpegtools-1.9.0rc3/README.DV
+  /usr/share/doc/mjpegtools-1.9.0rc3/README.avilib
+  /usr/share/doc/mjpegtools-1.9.0rc3/README.glav
+  /usr/share/doc/mjpegtools-1.9.0rc3/README.lavpipe
+  /usr/share/doc/mjpegtools-1.9.0rc3/README.transist
+  /usr/share/doc/mjpegtools-1.9.0rc3/TODO
   /usr/share/info/mjpeg-howto.info.gz
   /usr/share/man/man1/jpeg2yuv.1.gz
   /usr/share/man/man1/lav2mpeg.1.gz
@@ -149,12 +161,12 @@ Files included in the binary packages:
   /usr/share/man/man5/yuv4mpeg.5.gz
 
 (libmjpegtools18)
-  /usr/bin/cyglavfile-1-8-0.dll
-  /usr/bin/cyglavjpeg-1-8-0.dll
-  /usr/bin/cyglavplay-1-8-0.dll
-  /usr/bin/cygmjpegutils-1-8-0.dll
-  /usr/bin/cygmpeg2encpp-1-8-0.dll
-  /usr/bin/cygmplex2-1-8-0.dll
+  /usr/bin/cyglavfile-1-9-0.dll
+  /usr/bin/cyglavjpeg-1-9-0.dll
+  /usr/bin/cyglavplay-1-9-0.dll
+  /usr/bin/cygmjpegutils-1-9-0.dll
+  /usr/bin/cygmpeg2encpp-1-9-0.dll
+  /usr/bin/cygmplex2-1-9-0.dll
 
 (libmjpegtools-devel)
   /usr/include/mjpegtools/audiolib.h
@@ -168,15 +180,20 @@ Files included in the binary packages:
   /usr/include/mjpegtools/liblavrec.h
   /usr/include/mjpegtools/mjpeg_logging.h
   /usr/include/mjpegtools/mjpeg_types.h
+  /usr/include/mjpegtools/motionsearch.h
   /usr/include/mjpegtools/mpeg2enc/elemstrmwriter.hh
   /usr/include/mjpegtools/mpeg2enc/encoderparams.hh
   /usr/include/mjpegtools/mpeg2enc/encodertypes.h
+  /usr/include/mjpegtools/mpeg2enc/imageplanes.hh
   /usr/include/mjpegtools/mpeg2enc/macroblock.hh
   /usr/include/mjpegtools/mpeg2enc/mpeg2coder.hh
   /usr/include/mjpegtools/mpeg2enc/mpeg2encoder.hh
   /usr/include/mjpegtools/mpeg2enc/mpeg2encoptions.hh
   /usr/include/mjpegtools/mpeg2enc/mpeg2encparams.h
   /usr/include/mjpegtools/mpeg2enc/mpeg2syntaxcodes.h
+  /usr/include/mjpegtools/mpeg2enc/ontheflyratectl.hh
+  /usr/include/mjpegtools/mpeg2enc/pass1ratectl.hh
+  /usr/include/mjpegtools/mpeg2enc/pass2ratectl.hh
   /usr/include/mjpegtools/mpeg2enc/picture.hh
   /usr/include/mjpegtools/mpeg2enc/picturereader.hh
   /usr/include/mjpegtools/mpeg2enc/predict_ref.h
@@ -222,6 +239,9 @@ Files included in the binary packages:
 ------------------
 
 Port Notes:
+
+----- version 1.9.0rc3-1 -----
+Version bump.
 
 ----- version 1.8.0-1 -----
 Initial release for Cygwin.

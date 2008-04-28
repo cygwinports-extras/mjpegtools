@@ -1,5 +1,5 @@
 category: Audio Video
-requires: cygwin libSDL12 libdv4 libjpeg62 libquicktime
+requires: cygwin libSDL12 libdv4 libjpeg62 libquicktime0
 external-source: mjpegtools
 sdesc: "MPEG2 compression suite (libraries)"
 ldesc: "The mjpeg programs are a set of tools that can do recording of 
