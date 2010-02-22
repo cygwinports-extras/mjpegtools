@@ -1,0 +1,7 @@
+--- origsrc/mjpegtools-1.9.0rc3/docs/mjpeg-howto.info	2007-12-03 12:06:25.000000000 -0600
++++ src/mjpegtools-1.9.0rc3/docs/mjpeg-howto.info	2008-04-25 19:30:01.109375000 -0500
+@@ -1,3 +1,4 @@
++INFO-DIR-SECTION Miscellaneous
+ START-INFO-DIR-ENTRY
+ * mjpegtools: (mjpeg-howto).       command line tools for MPEG audio and video.
+ END-INFO-DIR-ENTRY

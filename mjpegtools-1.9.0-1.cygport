@@ -1,0 +1,37 @@
+DESCRIPTION="MPEG video playback and conversion suite"
+HOMEPAGE="http://mjpeg.sourceforge.net/"
+SRC_URI="mirror://sourceforge/mjpeg/${P}.tar.gz"
+PATCH_URI="1.9.0rc3-no-undefined.patch
+           1.9.0rc3-texinfo.patch"
+
+PKG_NAMES="${PN} lib${PN}${PV_MAJ_MIN}_0 lib${PN}-devel"
+mjpegtools_CONTENTS='--exclude=*.dll usr/bin/ usr/share/'
+libmjpegtools1_9_0_CONTENTS='usr/bin/*-1-9-0.dll'
+libmjpegtools_devel_CONTENTS='usr/include/ usr/lib/'
+
+DIFF_EXCLUDES="*.pc"
+
+CFLAGS+=" -fno-strict-aliasing"
+CXXFLAGS+=" -fno-strict-aliasing"
+
+CYGCONF_ARGS="
+	--enable-simd-accel
+	--enable-largefile
+	--disable-assert
+	--with-gtk
+	--with-libdv=/usr
+	--with-libpng
+	--with-libquicktime
+	--with-sdl
+	--without-jpeg-mmx
+	--without-v4l
+"
+DOCS="HINTS PLANS README.*"
+
+src_compile() {
+	cd ${S}
+	cygautoreconf
+	cd ${B}
+	cygconf
+	cygmake CFLAGS="${CFLAGS}" CXXFLAGS="${CXXFLAGS}"
+}

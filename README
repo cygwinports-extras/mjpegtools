@@ -5,28 +5,30 @@ and playback, simple cut-and-paste editing and the MPEG compression of
 audio and video under Linux.
 
 Runtime requirements:
-  cygwin-1.5.25-11
-  glib2-2.14.6-1
-  gtk2-x11-2.12.9-1
-  libSDL12-1.2.12-1
-  libSDL_gfx-2.0.16-1
-  libdv4-1.0.0-1
-  libjpeg62-6b-12
-  libpng12-1.2.26-1
-  libquicktime0-1.0.2-1
+  cygwin-1.7.1-1
+  libdv4-1.0.0-10
+  libgcc1-4.3.4-3
+  libglib2.0_0-2.22.4-2
+  libgtk2.0_0-2.18.6-1
+  libjpeg7-7-10
+  libpng12-1.2.35-10
+  libquicktime0-1.1.4-1
+  libSDL1.2_0-1.2.14-1
+  libSDL_gfx13-2.0.20-1
+  libstdc++6-4.3.4-3
 
 Build requirements:
 (besides corresponding -devel packages)
-  autoconf2.5-2.61-1
-  automake1.9-1.9.6-2
-  binutils-20060817-1
-  cygport-0.3.9-1
-  gawk-3.1.6-1
-  gcc-core-3.4.4-3
-  gcc-g++-3.4.4-3
-  libtool-2.2.2-2
-  make-3.81-1
-  pkg-config-0.21-1
+  autoconf2.5-2.65-1
+  automake1.9-1.9.6-10
+  binutils-2.19.51-1
+  cygport-0.9.80-1
+  gawk-3.1.7-1
+  gcc4-core-4.3.4-3
+  gcc4-g++-4.3.4-3
+  libtool-2.2.7a-15
+  make-3.81-2
+  pkg-config-0.23b-10
   sed-4.1.5-2
 
 Canonical website:
@@ -38,213 +40,22 @@ Canonical download:
 -------------------------------------------
 
 Build instructions:
-  unpack mjpegtools-1.9.0rc3-X-src.tar.bz2
+  unpack mjpegtools-1.9.0-X-src.tar.bz2
     if you use setup to install this src package, it will be
 	 unpacked under /usr/src automatically
   cd /usr/src
-  cygport ./mjpegtools-1.9.0rc3-X.cygport all
+  cygport ./mjpegtools-1.9.0-X.cygport all
 
 This will create:
-  /usr/src/mjpegtools-1.9.0rc3-X-src.tar.bz2
-  /usr/src/mjpegtools-1.9.0rc3-X.tar.bz2
+  /usr/src/mjpegtools-1.9.0-X-src.tar.bz2
+  /usr/src/mjpegtools-1.9.0-X.tar.bz2
 
 -------------------------------------------
 
-Files included in the binary packages:
-
-(mjpegtools)
-  /etc/postinstall/mjpegtools.sh
-  /usr/bin/anytovcd.sh
-  /usr/bin/glav.exe
-  /usr/bin/jpeg2yuv.exe
-  /usr/bin/lav2avi.sh
-  /usr/bin/lav2mpeg
-  /usr/bin/lav2wav.exe
-  /usr/bin/lav2yuv.exe
-  /usr/bin/lavaddwav.exe
-  /usr/bin/lavinfo.exe
-  /usr/bin/lavpipe.exe
-  /usr/bin/lavplay.exe
-  /usr/bin/lavtc.sh
-  /usr/bin/lavtrans.exe
-  /usr/bin/matteblend.flt.exe
-  /usr/bin/mjpeg_simd_helper.exe
-  /usr/bin/mp2enc.exe
-  /usr/bin/mpeg2enc.exe
-  /usr/bin/mpegtranscode
-  /usr/bin/mplex.exe
-  /usr/bin/multiblend.flt.exe
-  /usr/bin/pgmtoy4m.exe
-  /usr/bin/png2yuv.exe
-  /usr/bin/pnmtoy4m.exe
-  /usr/bin/ppmtoy4m.exe
-  /usr/bin/qttoy4m.exe
-  /usr/bin/transist.flt.exe
-  /usr/bin/y4mblack.exe
-  /usr/bin/y4mcolorbars.exe
-  /usr/bin/y4mdenoise.exe
-  /usr/bin/y4mhist.exe
-  /usr/bin/y4minterlace.exe
-  /usr/bin/y4mivtc.exe
-  /usr/bin/y4mshift.exe
-  /usr/bin/y4mspatialfilter.exe
-  /usr/bin/y4mstabilizer.exe
-  /usr/bin/y4mtopnm.exe
-  /usr/bin/y4mtoppm.exe
-  /usr/bin/y4mtoqt.exe
-  /usr/bin/y4mtoyuv.exe
-  /usr/bin/y4munsharp.exe
-  /usr/bin/ypipe.exe
-  /usr/bin/yuv2lav.exe
-  /usr/bin/yuv4mpeg.exe
-  /usr/bin/yuvcorrect.exe
-  /usr/bin/yuvcorrect_tune.exe
-  /usr/bin/yuvdeinterlace.exe
-  /usr/bin/yuvdenoise.exe
-  /usr/bin/yuvfps.exe
-  /usr/bin/yuvinactive.exe
-  /usr/bin/yuvkineco.exe
-  /usr/bin/yuvmedianfilter.exe
-  /usr/bin/yuvplay.exe
-  /usr/bin/yuvscaler.exe
-  /usr/bin/yuvycsnoise.exe
-  /usr/bin/yuyvtoy4m.exe
-  /usr/share/doc/mjpegtools-1.9.0rc3/AUTHORS
-  /usr/share/doc/mjpegtools-1.9.0rc3/BUGS
-  /usr/share/doc/mjpegtools-1.9.0rc3/COPYING
-  /usr/share/doc/mjpegtools-1.9.0rc3/ChangeLog
-  /usr/share/doc/mjpegtools-1.9.0rc3/Changes
-  /usr/share/doc/mjpegtools-1.9.0rc3/HINTS
-  /usr/share/doc/mjpegtools-1.9.0rc3/INSTALL
-  /usr/share/doc/mjpegtools-1.9.0rc3/INSTALL.real
-  /usr/share/doc/mjpegtools-1.9.0rc3/NEWS
-  /usr/share/doc/mjpegtools-1.9.0rc3/PLANS
-  /usr/share/doc/mjpegtools-1.9.0rc3/README
-  /usr/share/doc/mjpegtools-1.9.0rc3/README.AltiVec
-  /usr/share/doc/mjpegtools-1.9.0rc3/README.DV
-  /usr/share/doc/mjpegtools-1.9.0rc3/README.avilib
-  /usr/share/doc/mjpegtools-1.9.0rc3/README.glav
-  /usr/share/doc/mjpegtools-1.9.0rc3/README.lavpipe
-  /usr/share/doc/mjpegtools-1.9.0rc3/README.transist
-  /usr/share/doc/mjpegtools-1.9.0rc3/TODO
-  /usr/share/info/mjpeg-howto.info.gz
-  /usr/share/man/man1/jpeg2yuv.1.gz
-  /usr/share/man/man1/lav2mpeg.1.gz
-  /usr/share/man/man1/lav2wav.1.gz
-  /usr/share/man/man1/lav2yuv.1.gz
-  /usr/share/man/man1/lavpipe.1.gz
-  /usr/share/man/man1/lavplay.1.gz
-  /usr/share/man/man1/lavrec.1.gz
-  /usr/share/man/man1/lavtrans.1.gz
-  /usr/share/man/man1/mjpegtools.1.gz
-  /usr/share/man/man1/mp2enc.1.gz
-  /usr/share/man/man1/mpeg2enc.1.gz
-  /usr/share/man/man1/mplex.1.gz
-  /usr/share/man/man1/pgmtoy4m.1.gz
-  /usr/share/man/man1/png2yuv.1.gz
-  /usr/share/man/man1/pnmtoy4m.1.gz
-  /usr/share/man/man1/ppmtoy4m.1.gz
-  /usr/share/man/man1/y4mcolorbars.1.gz
-  /usr/share/man/man1/y4mdenoise.1.gz
-  /usr/share/man/man1/y4mtopnm.1.gz
-  /usr/share/man/man1/y4mtoppm.1.gz
-  /usr/share/man/man1/y4munsharp.1.gz
-  /usr/share/man/man1/yuv2lav.1.gz
-  /usr/share/man/man1/yuvdenoise.1.gz
-  /usr/share/man/man1/yuvfps.1.gz
-  /usr/share/man/man1/yuvinactive.1.gz
-  /usr/share/man/man1/yuvkineco.1.gz
-  /usr/share/man/man1/yuvmedianfilter.1.gz
-  /usr/share/man/man1/yuvplay.1.gz
-  /usr/share/man/man1/yuvscaler.1.gz
-  /usr/share/man/man1/yuvycsnoise.1.gz
-  /usr/share/man/man5/yuv4mpeg.5.gz
-
-(libmjpegtools18)
-  /usr/bin/cyglavfile-1-9-0.dll
-  /usr/bin/cyglavjpeg-1-9-0.dll
-  /usr/bin/cyglavplay-1-9-0.dll
-  /usr/bin/cygmjpegutils-1-9-0.dll
-  /usr/bin/cygmpeg2encpp-1-9-0.dll
-  /usr/bin/cygmplex2-1-9-0.dll
-
-(libmjpegtools-devel)
-  /usr/include/mjpegtools/audiolib.h
-  /usr/include/mjpegtools/avilib.h
-  /usr/include/mjpegtools/editlist.h
-  /usr/include/mjpegtools/format_codes.h
-  /usr/include/mjpegtools/frequencies.h
-  /usr/include/mjpegtools/jpegutils.h
-  /usr/include/mjpegtools/lav_io.h
-  /usr/include/mjpegtools/liblavplay.h
-  /usr/include/mjpegtools/liblavrec.h
-  /usr/include/mjpegtools/mjpeg_logging.h
-  /usr/include/mjpegtools/mjpeg_types.h
-  /usr/include/mjpegtools/motionsearch.h
-  /usr/include/mjpegtools/mpeg2enc/elemstrmwriter.hh
-  /usr/include/mjpegtools/mpeg2enc/encoderparams.hh
-  /usr/include/mjpegtools/mpeg2enc/encodertypes.h
-  /usr/include/mjpegtools/mpeg2enc/imageplanes.hh
-  /usr/include/mjpegtools/mpeg2enc/macroblock.hh
-  /usr/include/mjpegtools/mpeg2enc/mpeg2coder.hh
-  /usr/include/mjpegtools/mpeg2enc/mpeg2encoder.hh
-  /usr/include/mjpegtools/mpeg2enc/mpeg2encoptions.hh
-  /usr/include/mjpegtools/mpeg2enc/mpeg2encparams.h
-  /usr/include/mjpegtools/mpeg2enc/mpeg2syntaxcodes.h
-  /usr/include/mjpegtools/mpeg2enc/ontheflyratectl.hh
-  /usr/include/mjpegtools/mpeg2enc/pass1ratectl.hh
-  /usr/include/mjpegtools/mpeg2enc/pass2ratectl.hh
-  /usr/include/mjpegtools/mpeg2enc/picture.hh
-  /usr/include/mjpegtools/mpeg2enc/picturereader.hh
-  /usr/include/mjpegtools/mpeg2enc/predict_ref.h
-  /usr/include/mjpegtools/mpeg2enc/quantize.hh
-  /usr/include/mjpegtools/mpeg2enc/quantize_ref.h
-  /usr/include/mjpegtools/mpeg2enc/ratectl.hh
-  /usr/include/mjpegtools/mpeg2enc/seqencoder.hh
-  /usr/include/mjpegtools/mpeg2enc/streamstate.h
-  /usr/include/mjpegtools/mpeg2enc/synchrolib.h
-  /usr/include/mjpegtools/mpeg2enc/syntaxconsts.h
-  /usr/include/mjpegtools/mpegconsts.h
-  /usr/include/mjpegtools/mpegtimecode.h
-  /usr/include/mjpegtools/mplex/audiostrm.hpp
-  /usr/include/mjpegtools/mplex/aunit.hpp
-  /usr/include/mjpegtools/mplex/aunitbuffer.hpp
-  /usr/include/mjpegtools/mplex/bits.hpp
-  /usr/include/mjpegtools/mplex/decodebufmodel.hpp
-  /usr/include/mjpegtools/mplex/inputstrm.hpp
-  /usr/include/mjpegtools/mplex/interact.hpp
-  /usr/include/mjpegtools/mplex/mplexconsts.hpp
-  /usr/include/mjpegtools/mplex/multiplexor.hpp
-  /usr/include/mjpegtools/mplex/outputstrm.hpp
-  /usr/include/mjpegtools/mplex/padstrm.hpp
-  /usr/include/mjpegtools/mplex/stillsstream.hpp
-  /usr/include/mjpegtools/mplex/stream_params.hpp
-  /usr/include/mjpegtools/mplex/systems.hpp
-  /usr/include/mjpegtools/mplex/videostrm.hpp
-  /usr/include/mjpegtools/yuv4mpeg.h
-  /usr/lib/liblavfile.dll.a
-  /usr/lib/liblavfile.la
-  /usr/lib/liblavjpeg.dll.a
-  /usr/lib/liblavjpeg.la
-  /usr/lib/liblavplay.dll.a
-  /usr/lib/liblavplay.la
-  /usr/lib/libmjpegutils.dll.a
-  /usr/lib/libmjpegutils.la
-  /usr/lib/libmpeg2encpp.dll.a
-  /usr/lib/libmpeg2encpp.la
-  /usr/lib/libmplex2.dll.a
-  /usr/lib/libmplex2.la
-  /usr/lib/pkgconfig/mjpegtools.pc
-
-------------------
-
 Port Notes:
 
------ version 1.9.0rc3-1 -----
-Version bump.
-
------ version 1.8.0-1 -----
-Initial release for Cygwin.
+----- version 1.9.0-1 -----
+Initial release for Cygwin 1.7.
 
 
 Cygwin port maintained by:
