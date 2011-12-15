@@ -6,13 +6,10 @@ PATCH_URI="1.9.0rc3-no-undefined.patch
 
 PKG_NAMES="${PN} lib${PN}${PV_MAJ_MIN}_0 lib${PN}-devel"
 mjpegtools_CONTENTS='--exclude=*.dll usr/bin/ usr/share/'
-libmjpegtools1_9_0_CONTENTS='usr/bin/*-1-9-0.dll'
+libmjpegtools2_0_0_CONTENTS='usr/bin/*-2-0-0.dll'
 libmjpegtools_devel_CONTENTS='usr/include/ usr/lib/'
 
 DIFF_EXCLUDES="*.pc"
-
-CFLAGS+=" -fno-strict-aliasing"
-CXXFLAGS+=" -fno-strict-aliasing"
 
 CYGCONF_ARGS="
 	--enable-simd-accel
@@ -26,12 +23,13 @@ CYGCONF_ARGS="
 	--without-jpeg-mmx
 	--without-v4l
 "
-DOCS="HINTS PLANS README.*"
 
 src_compile() {
 	cd ${S}
 	cygautoreconf
 	cd ${B}
-	cygconf
-	cygmake CFLAGS="${CFLAGS}" CXXFLAGS="${CXXFLAGS}"
+	cygconf # CYGCONF_ARGS defined above
+	cygmake CFLAGS="${CFLAGS} -fno-strict-aliasing" CXXFLAGS="${CXXFLAGS} -fno-strict-aliasing"
 }
+
+DOCS="HINTS PLANS README.*"

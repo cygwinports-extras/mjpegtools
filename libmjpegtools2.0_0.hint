@@ -1,5 +1,5 @@
 category: Audio Video
-requires: libdv4 libgcc1 libjpeg7 libquicktime0 libSDL1.2_0 libstdc++6
+requires: libdv4 libgcc1 libjpeg8 libquicktime0 libSDL1.2_0 libstdc++6
 external-source: mjpegtools
 sdesc: "MPEG2 compression suite (libraries)"
 ldesc: "The mjpeg programs are a set of tools that can do recording of 
