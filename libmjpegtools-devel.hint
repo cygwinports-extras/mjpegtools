@@ -1,7 +1,0 @@
-category: Audio Video
-requires: libmjpegtools2.0_0 libSDL-devel libdv-devel libjpeg-devel libquicktime-devel
-external-source: mjpegtools
-sdesc: "MPEG2 compression suite (development)"
-ldesc: "The mjpeg programs are a set of tools that can do recording of 
-videos and playback, simple cut-and-paste editing and the MPEG 
-compression of audio and video under Linux."

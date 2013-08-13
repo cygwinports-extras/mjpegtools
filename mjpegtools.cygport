@@ -1,12 +1,24 @@
-DESCRIPTION="MPEG video playback and conversion suite"
+NAME="mjpegtools"
+VERSION=2.0.0
+RELEASE=2
+CATEGORY="Audio Video"
+SUMMARY="MPEG video playback and conversion suite"
+DESCRIPTION="The mjpeg programs are a set of tools that can do recording of
+videos and playback, simple cut-and-paste editing and the MPEG compression of
+audio and video under Linux."
 HOMEPAGE="http://mjpeg.sourceforge.net/"
-SRC_URI="mirror://sourceforge/mjpeg/${P}.tar.gz"
-PATCH_URI="1.9.0rc3-no-undefined.patch
-           1.9.0rc3-texinfo.patch"
+SRC_URI="mirror://sourceforge/mjpeg/${NAME}-${VERSION}.tar.gz"
+PATCH_URI="
+	1.9.0rc3-no-undefined.patch
+	1.9.0rc3-texinfo.patch
+	2.0.0-gcc47.patch
+"
 
-PKG_NAMES="${PN} lib${PN}${PV_MAJ_MIN}_0 lib${PN}-devel"
+PKG_NAMES="${NAME} lib${NAME}${VERSION%.*}_0 lib${NAME}-devel"
 mjpegtools_CONTENTS='--exclude=*.dll usr/bin/ usr/share/'
+libmjpegtools2_0_0_CATEGORY="Libs"
 libmjpegtools2_0_0_CONTENTS='usr/bin/*-2-0-0.dll'
+libmjpegtools_devel_CATEGORY="Libs"
 libmjpegtools_devel_CONTENTS='usr/include/ usr/lib/'
 
 DIFF_EXCLUDES="*.pc"
