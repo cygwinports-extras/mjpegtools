@@ -1,6 +1,6 @@
 NAME="mjpegtools"
-VERSION=2.0.0
-RELEASE=2
+VERSION=2.1.0
+RELEASE=1
 CATEGORY="Audio Video"
 SUMMARY="MPEG video playback and conversion suite"
 DESCRIPTION="The mjpeg programs are a set of tools that can do recording of
@@ -11,13 +11,12 @@ SRC_URI="mirror://sourceforge/mjpeg/${NAME}-${VERSION}.tar.gz"
 PATCH_URI="
 	1.9.0rc3-no-undefined.patch
 	1.9.0rc3-texinfo.patch
-	2.0.0-gcc47.patch
 "
 
 PKG_NAMES="${NAME} lib${NAME}${VERSION%.*}_0 lib${NAME}-devel"
 mjpegtools_CONTENTS='--exclude=*.dll usr/bin/ usr/share/'
-libmjpegtools2_0_0_CATEGORY="Libs"
-libmjpegtools2_0_0_CONTENTS='usr/bin/*-2-0-0.dll'
+libmjpegtools2_1_0_CATEGORY="Libs"
+libmjpegtools2_1_0_CONTENTS='usr/bin/*-2-1-0.dll'
 libmjpegtools_devel_CATEGORY="Libs"
 libmjpegtools_devel_CONTENTS='usr/include/ usr/lib/'
 
@@ -45,3 +44,5 @@ src_compile() {
 }
 
 DOCS="HINTS PLANS README.*"
+
+KEEP_LA_FILES="none"
